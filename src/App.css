@@ -1,0 +1,83 @@
+body {
+  font-family: 'Helvetica', 'Lato', sans-serif;
+  color: #333333;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+table {
+
+}
+
+a {
+  color: #BC1629;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #BC1629;
+  text-decoration: underline;
+}
+
+#root {
+}
+
+table th {
+  text-align: left;
+  min-width: 100px;
+}
+
+table tr {
+  height: 32px;
+}
+
+/* '--phone': '(min-width: 544px)',
+'--tablet': '(min-width: 768px)',
+'--desktop': '(min-width: 992px)',
+'--large-desktop': '(min-width: 1200px)', */
+
+.container {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 16px;
+  /* max-width: 800px; */
+}
+
+.App {
+  display: flex;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.title-muted {
+  color: #ccc;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 200;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media screen and (min-width : 375px) and (max-width : 667px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}

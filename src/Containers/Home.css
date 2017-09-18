@@ -1,0 +1,31 @@
+.home-navigation ul, .home-navigation ul li {
+  list-style: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  line-height: 32px;
+  display: flex;
+  flex-direction: column
+}
+
+.home-navigation ul li {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.home-navigation ul li span.year {
+  padding-right: 16px;
+  /* opacity: 0.7; */
+}
+
+.home-navigation ul li span.location {
+  width: 100px;
+  text-align: right;
+  padding-right: 16px;
+}
+
+.home-navigation ul li span.title {
+  width: 300px;
+  font-weight: 300;
+}
