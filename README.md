@@ -1,3 +1,9 @@
+![ci-build-status](https://circleci.com/gh/roytang121/src.roytang121.github.io.png?circle-token=944237b3a1177500228463cf961cd91ba1b11a84)
+
+Source repo for [my personal portfolio](https://roytang121.github.io)
+
+___________
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
