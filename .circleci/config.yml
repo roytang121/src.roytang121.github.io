@@ -38,11 +38,11 @@ jobs:
       - run: yarn build
       
       - store_artifacts:
-        path: /build-1
-        destination: roytang121.github.io-SNAPSHOT
+          path: /build-1
+          destination: roytang121.github.io-SNAPSHOT
       
       - store_artifacts:
-        path: /build
+          path: /build
 
 
 
