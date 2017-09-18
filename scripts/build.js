@@ -131,7 +131,7 @@ function build(previousFileSizes) {
               'Most CI servers set it automatically.\n'
           )
         );
-        return reject(new Error(messages.warnings.join('\n\n')));
+        // return reject(new Error(messages.warnings.join('\n\n')));
       }
       return resolve({
         stats,
