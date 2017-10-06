@@ -4,3 +4,7 @@
   font-size: 18px;
   line-height: 32px;
 }
+
+.markdown-container img {
+  width: 100%;
+}

@@ -5,14 +5,14 @@ import { connect } from 'react-redux'
 // default is Blog
 let mapDispatchToProps = (dispatch) => {
   return {
-    loadBlog: (wrapper) => wrapper && dispatch({type: 'LOAD_BLOG_REQUEST', payload: wrapper})
+    loadBlog: (wrapper) => wrapper && dispatch({type: 'LOAD_WORK_REQUEST', payload: wrapper})
   }
 }
 
 let mapStateToProps = (state, ownProps) => {
-  let blogPath = ownProps.wrapper.path
+  let workPath = ownProps.wrapper.path
   return {
-    blog: state.blogs && state.blogs[blogPath] || null
+    blog: state.works && state.works[workPath] || null
   }
 }
 

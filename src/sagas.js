@@ -19,6 +19,7 @@ async function textFetch (url) {
 
 function* appDidMount (action) {
   yield put({type: 'LOAD_BLOGLIST_REQUEST', payload: null})
+  yield put({type: 'LOAD_WORKSLIST_REQUEST', payload: null})
 }
 
 function* fetchBloglist (action) {
@@ -51,10 +52,34 @@ function* fetchBlog (action) {
   yield put({type: 'LOAD_BLOG_SUCCESS', payload: payload})
 }
 
+function* fetchWork (action) {
+  let { path } = action.payload
+
+  let rootDir = '/works'
+  let fetchPath = `${rootDir}${path}`
+  const response = yield textFetch(fetchPath)
+  let payload = {
+    path: path,
+    data: response
+  }
+  yield put({type: 'LOAD_WORK_SUCCESS', payload: payload})
+}
+
+function* fetchWorkslist (action) {
+  try {
+    const response = yield jsonFetch('/works_list.json')
+    yield put({type: 'LOAD_WORKSLIST_SUCCESS', payload: response})
+  } catch (err) {
+    console.error(err)
+  }
+}
+
 function* mySaga () {
   yield takeLatest('APP_DID_MOUNT', appDidMount)
   yield takeLatest('LOAD_BLOGLIST_REQUEST', fetchBloglist)
   yield takeEvery('LOAD_BLOG_REQUEST', fetchBlog)
+  yield takeLatest('LOAD_WORKSLIST_REQUEST', fetchWorkslist)
+  yield takeEvery('LOAD_WORK_REQUEST', fetchWork)
 }
 
 export default mySaga

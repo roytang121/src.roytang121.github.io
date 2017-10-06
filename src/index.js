@@ -23,6 +23,7 @@ import createSagaMiddlewae from 'redux-saga'
 import Home from './Containers/Home'
 import Empty from './Containers/Empty'
 import Blogs from './Containers/Blogs'
+import Works from './Containers/Works'
 
 const sagaMiddleware = createSagaMiddlewae()
 
@@ -55,7 +56,7 @@ const Main =
         <Route exact path='/' component={Home} />
         <Route exact path='/about' component={Home} />
         <Route path ='/blog' component={Blogs} />
-        <Route path='/works' component={Empty} />
+        <Route path='/works' component={Works} />
       </App>
     </ConnectedRouter>
   </Provider>
